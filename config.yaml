@@ -1,0 +1,24 @@
+name: "InfluxDB MQTT Collector (Node.js)"
+version: "1.0.0"
+slug: "influxdb_mqtt_collector_nodejs"
+description: "Collects MQTT data and stores it in InfluxDB using Node.js"
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+startup: application
+boot: auto
+services:
+  - mqtt:need
+ports:
+  8086/tcp: 8086
+options:
+  mqtt_broker: "core-mosquitto"
+  mqtt_topic: "#"
+  influxdb_database: "home_assistant"
+schema:
+  mqtt_broker: str
+  mqtt_topic: str
+  influxdb_database: str

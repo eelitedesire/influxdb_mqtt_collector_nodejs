@@ -1,0 +1,13 @@
+{
+    "name": "influxdb-mqtt-collector",
+    "version": "1.0.0",
+    "description": "Collects MQTT data and stores it in InfluxDB",
+    "main": "collect_mqtt.js",
+    "scripts": {
+      "start": "node collect_mqtt.js"
+    },
+    "dependencies": {
+      "mqtt": "^4.3.7",
+      "@influxdata/influxdb-client": "^1.33.0"
+    }
+  }
